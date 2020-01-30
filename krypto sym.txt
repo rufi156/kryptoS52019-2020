@@ -1,0 +1,31 @@
+PN-I-13335
+Wymień główne problemy związane z bezpieczeństwem systemów komputerowych
+w/g Polskiej Normy PN-I-13335.  Którymi z tych problemów zajmowała się kryptografia klasyczna?
+
+Kryptoanaliza
+Dla szyfrów Cezara, Vigenere'a, Enigmy opisz w kilku słowach jaka jest ich kryptoanaliza
+(np. trywialna/łatwa nawet ręcznie/łatwa  używając komputera/b. trudna/praktycznie niemożliwa).
+Osobno rozpatrz różne scenariusze kryptoanalizy:
+    bez znajomości tekstu jawnego
+    ze znajomością niewielkich przykładów tekstu jawnego
+    ze znajomością dużej ilości tekstu jawnego
+    z możliwością wyboru tekstu jawnego
+
+Kryptoanaliza c.d.
+Jakie są możliwości kryptografii przy założeniu nieograniczonych możliwości obliczeniowych
+przeciwnika?  Jakie przyjmujemy możliwości przeciwnika w praktyce?  Sformułuj zasadę Kerckhoffsa.
+
+Tryby szyfrów blokowych
+    Jakie znasz tryby szyfrów blokowych?
+    Dla każdego z trybów wymień wady i zalety.
+
+DES
+Jakie hasło przyświecało zasadom projektowym szyfru DES?  Czy DES jest dzisiaj szyfrem
+bezpiecznym?  Jakie modyfikacje stosowano w celu ulepszenia DES-a?  Jak się nazywa dzisiejszy
+standard szyfrowania.
+
+Funkcje skrótu
+Jakie własności powinna mieć funkcja skrótu?
+Jakie znasz funkcje skrótu, czy wszystkie własności są przez nie posiadane?
+Jakie znasz zastosowania funkcji skrótu? W jaki sposób naruszenie własności z pkt 1 uniemożliwi te zastosowania?
+

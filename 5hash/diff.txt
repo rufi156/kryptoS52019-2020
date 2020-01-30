@@ -1,0 +1,38 @@
+Wykonywane polecenia i wyniki:
+
+cat hash.pdf personal.txt | md5sum
+cat hash.pdf personal_.txt | md5sum
+09d5ad863d7aa5f29cff13fff69a5192
+e72509e308bee2e83b0a88ec082858d9
+Liczba bitow rozniaca wyniki: 67 tj. 52.0% z 128
+
+cat hash.pdf personal.txt | sha1sum
+cat hash.pdf personal_.txt | sha1sum
+cb2d9a2af44271707a7b297ac8111e74d4612b81
+fe54271e0ed6453b404308a3d4948ce339064629
+Liczba bitow rozniaca wyniki: 81 tj. 50.0% z 160
+
+cat hash.pdf personal.txt | sha224sum
+cat hash.pdf personal_.txt | sha224sum
+6e2d34fe1988a3021354916150a09525d78f9f2196a098e055f3261f
+bb17d7babac35758e23d6c5c05a0b52c002e8a8c328751f9ccbb5b05
+Liczba bitow rozniaca wyniki: 107 tj. 47.0% z 224
+
+cat hash.pdf personal.txt | sha256sum
+cat hash.pdf personal_.txt | sha256sum
+c41bae5889d4b682960b6794f09e951b792346c88fb69cf0b616e306bd32acb9
+53a2c0d8498545471ab3476bf833fc9eb5660308efaea7e5f7f57a8a506e2b0a
+Liczba bitow rozniaca wyniki: 117 tj. 45.0% z 256
+
+cat hash.pdf personal.txt | sha384sum
+cat hash.pdf personal_.txt | sha384sum
+2068d29389c21959db9efbdc6867c38e26ff823ba5fb584a9cee733da8ae0c994331b524fd0d7ddb778564ed39bcde98
+862e829f2d3385c89d1189cef803d54aabcf4fbb0e3fe72b187bd163c7306185695d0f59b829735e550362b2f868bcf2
+Liczba bitow rozniaca wyniki: 170 tj. 44.0% z 384
+
+cat hash.pdf personal.txt | sha512sum
+cat hash.pdf personal_.txt | sha512sum
+1cb39f1f5cd63b8d8a5f60c54cbe5684cc855786310d8d1ef079afd525545058969d9c5e69d89cb2e4607eb87db50887cdf15ca7624560a3b7e189b8d46850ed
+ee7116a40e716608a2d41144aee4be96d8ee00ad573c0f748a9347f00a0a559c5c56edc1ca6e45c33f029f12476ee93aed75ebe762d154cd43bb0c48de749841
+Liczba bitow rozniaca wyniki: 243 tj. 47.0% z 512
+

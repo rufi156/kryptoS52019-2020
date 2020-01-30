@@ -1,0 +1,13 @@
+UWAGA! W Python2 wszystko dziala idealnie bez dodatkowych opcji (plików binarnych)
+
+Napisane w Python3:
+- kryptoanaliza crypto.txt znajduje prawidlowy klucz,
+  ale niemozliwa jest idealna deszyfracja pliku crypto.txt,
+  (byc moze ze wzgledu na zapisane niedrukowalne znaki)
+- idealna kryptoanaliza mozliwa po zapisie tekstu w systemie binarnym
+  po dodaniu opcji:
+  "-e -b"
+  "-k -b"
+- opcja "-klucz" zapisuje klucz otrzymany w kryptoanalizie
+  do pliku "key-crypto.txt"
+

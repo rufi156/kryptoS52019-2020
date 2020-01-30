@@ -1,0 +1,101 @@
+pyt. 1. Jaka jest zależność pomiędzy następującymi faktami
+* znajomość rozkładu n=p*q
+* znajomość funkcji Eulera φ( n )
+* znajomość nietrywialnego pierwiastka x z 1, x^2=1 (mod n)
+- jezeli znamy rozklad + eulera jestesmy w stanie przeprowadzic obliczenia dla algorytmu RSA, gen. kluczy
+- jezeli znamy funkcje eulera to znajdziemy rozklad (test Rabina-Millera)
+- znajmosc rozkladu pozwala znalezc nietrywialne pierwiastki
+-znajomosc ntryw. Pary pozwala znalezc rozklad
+
+pyt. 2. Na czym polegają testy Fermata i Rabina-Millera? Co to jest świadek
+pierwszości i czemu służy to pojęcie?
+Test Fermata to probalistyczny test umozliwiajacy sprawdzenie czy dana liczba
+jest zlozona czy prawdopodobnie pierwsza. Jezeli n jest pierwsza to a^n-1 = 1 mod
+n.
+Tesr Rabina-MIllera jest testem okreslajacym czy dana liczba jest pierwsza.
+Swiadek pierwszosci to liczba sprawdzana w tescie m-r by zmniejszyc bledne rozpoznanie liczb pierwszej
+
+pyt. 3. Jakie nowe możliwości niesie kryptografia klucza asymetrycznego?
+- bez wstepnej wymiany klucza
+-jedyny klucz prywatny nie jest wymieniany
+-umozliwia podpis cyfrowy (niezaprzeczalnosc dokumentu)
+-protokol uzgodnienia wspolnego klucza zamiast wmiany
+
+pyt. 4. Jakie są ograniczenia kryptografii klucza asymetrycznego.
+- Zdecydowanie mniejsza wydajnosc
+- Wiecej sie szyfruje i uwierzytelnia (serwery)
+- Zasoby sa mniejsze (karta kryptograficzna) niz w kryptografii symetrycznej
+- Problem uwierzytelnienia klucza publicznego
+- wiec Atak man In the middle
+
+pyt. 5. Wymień cechy wymagane od podpisu cyfrowego.
+- Autentycznosc pochodzenia ktora daje pewnosc co do autorstwa
+dokumentu
+- Nizaprzeczalnosc ktora utrudnia wyparcie sie autorstwa lub znajomosci
+tresci dokumentu
+- Integralnosc ktora pozwala wykryc nieautoryzowane modyfikacje
+dokumentu po jego podpisaniu
+- Document jest podpisany raz dla wszystkich
+- Kazdy moze zweryfikowac podpis
+- Brak mozliwosci przeniesienia na inny document
+
+pyt. 6. Wymień schematy podpisu cyfrowego. Wymień cechy rożniące te
+schematy, ktory z nich umożliwia rownież szyfrowanie?
+RSA – umozliwia szyfrowanie
+Nieodpornosc na atak z wybranym kryptogramem
+Podpis jednorazowy
+Klucz prywatny do podpisu nie musi byc trwaly
+ElGamal
+Niedeterministyczny – ta sama wiadomosc moze miec wiele roznych podpisow
+Podpisanie dwoch wiadomosci ta sama wartoscia losowa powoduje
+skompromitowanie systemu
+DSA
+Czescia standardowa system jest funkcja skrotu SHA-1
+Formalnie nie ma zadnego dowodu na bezpieczenstwo schemata
+
+pyt 7. Na czym polega atak man-in-the-middle (ze środka), jakie są metody
+przeciwdziałania?
+Atak man in the middle polega na podsluchu I modyfikacji wiadomosci
+przesylanych pomiedzy dwiema stronami bez ich wiedzy np: podsuniecie nadawcy
+wlasnego klucza przy transmisji chronionej szyfrem asymetrycznym
+Metody przeciwdzialania:
+- Jedna strona zna klucz publiczny drugiej lub potrafi go zweryfikowa np: jest
+on podisany cyfrowo przez organizacje certyfikujaca
+- Nadanie klucza publicznego na wiekszej liczbie kanalow niz podsluchujacy
+jest w stanie przechwycic
+
+pyt 8. Jakie zadania wykonuje zaufane centrum certyfikacji?
+- Wystawianie certyfikatow
+- Uniewaznianie certyfikatow
+- Odtworzenie I aktualizacja kluczy
+- Znakowanie czasem (timestamping)
+
+pyt. 9. Z jakich elementow składa się certyfikat zgodny ze standardem x.509?
+numer wersji, numer kolejny, algorytm podpisu, wystawca, okres waznosci,
+wlasciciel certyfikatu, klucz publiczny wlasciciela, ewentualne inne pola, podpis
+wystawcy certyfikatu
+
+pyt. 10. Podaj kilka rożnic pomiędzy infrastrukturą klucza publicznego a modelem
+zaufania używanym w PGP.
+- Nie ma centrum certyfikacji
+- Uzytkownicy sami generuja sobie klucze I wystawiaja certyfikaty
+- Musza zadbac o ich rozpowszechnienie
+- Nie jest oczywiste w jaki sposob uniewaznic skompromitowane certyfikaty
+-:nie ma listy cert. uniewaz
+- Cala struktura nie podlega uregulowaniom prawnym
+
+Pyt. 11. Kerberos
+-czesc key distribution center
+-protokol uwierzytelniania i autoryzacji
+-atak przez powtorzenie niemozliwy
+-bo timestamp albo dodatkowa liczba jednorazowa
+
+Pyt. 12. SSL
+Używane do komunikacji„zwykłego” użytkownika z serwerem hhtp, serwer
+powinien być uwierzytelniony, uczestnik
+- klucze do komunikacji są generowane z klucza wstępnego i z podanych
+znacznikow czasu i liczb jednorazowych
+- Użycie znacznikow czasu i liczb jednorazowych uniemożliwiają atak przez
+powtorzenie
+- Komunikacja używa 6 kluczy (szyfrowanie, MAC, szyfr blokowy, osobno w
+każdą stronę komunikacji)

@@ -1,0 +1,22 @@
+Program napisany dla Python3
+
+Zadanie:
+Zaprogramowaæ szyfrowanie i odszyfrowywanie wiadomoœci przy u¿yciu szyfru Vigenere'a. Zak³adamy, ¿e tekst jawny jest ci¹giem ma³ych liter bez spacji, cyfr i znaków przestankowych. Taki tekst jawny trzeba przygotowaæ z realnie dostêpnego tekstu za pomoc¹ odpowiedniego narzêdzia.
+
+Program o nazwie vigenere powinien umo¿liwiaæ wywo³anie z linijki rozkazowej z nastêpuj¹cymi opcjami:
+
+-p (przygotowanie tekstu jawnego do szyfrowania),
+-e (szyfrowanie),
+-d (odszyfrowywanie),
+-k (kryptoanaliza wy³¹cznie w oparciu o kryptogram)
+
+Nazwy tych plików s¹ identyczne jak w poprzednim zadaniu:
+
+plain.txt: plik z tekstem jawnym,
+crypto.txt: plik z tekstem zaszyfrowanym,
+decrypt.txt: plik z tekstem odszyfrowanym,
+key.txt: plik zawieraj¹cy klucz,
+orig.txt: oryginalny tekst, przed przygotowaniem do szyfrowania
+key-crypto.txt: plik z kluczem znalezionym w wyniku kryptoanalizy
+
+Treœci¹ zadania jest w zasadzie kryptoanaliza. Nie nale¿y oczekiwaæ zadowalaj¹cych wyników jeœli kryptogramy s¹ krótkie. Jednak teksty jêzyka naturalnego o d³ugoœci setek i wiêcej znaków, np. zaszyfrowane artyku³y prasowe, dadz¹ siê rutynowo odszyfrowaæ bez znajomoœci klucza.

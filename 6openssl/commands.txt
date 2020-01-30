@@ -1,0 +1,20 @@
+1. gen keys:
+openssl genrsa -des3 1024 > key.pem
+
+2. gen cert with expr.date after 70 days:
+openssl req -x509 -new -days 70 -key key.pem > key-cert.pem
+
+3. sign file dane.txt:
+openssl dgst -sha256 -sign key.pem -out sig.sha256 dane.txt
+
+^commit results
+Check results:
+
+4. check expir date on cert:
+openssl x509 -enddate -noout -in key-cert.pem
+
+5. extract public key from cert:
+openssl x509 -pubkey -noout -in key-cert.pem > pubkey.pem
+
+6. validate signature with pub key:
+openssl dgst -sha256 -verify pubkey.pem -signature sig.sha256 dane.txt

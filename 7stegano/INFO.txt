@@ -1,0 +1,9 @@
+Python3
+
+opcja "-p" przygotowuje plik string [orig.txt] do hex [mess.txt]
+
+Czesto szwankuje parser na sigmie. Po 2-5 wywo³aniach komendy w koñcu zadzia³a. tzn:
+ -Jeœli przy wyodrebnianiu, plik [watermark.html] jest pusty:
+    wykonaæ ponownie zanurzanie;
+ -Jeœli w trakcie wyodrebniania wyrzuca "ValueError: invalid literal for int() with base 2: ''":
+    wykonaæ ponownie wyodrebnienie.
